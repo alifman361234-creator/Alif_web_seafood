@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 100px;
+  background-color: #2a2323;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.nav .logo h1 {
+  font-weight: 600;
+  color: white;
+}
+
+.nav .logo b {
+  color: #ff511c;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-right: 30px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #ff511c;
+  transition: 0.3s;
+}
+
+.nav ul li a:hover::after,
+.nav ul li a.active::after {
+  width: 100%;
+}
+
+input {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signin {
+  background: #fff;
+  border: none;
+  color: #222;
+}
+
+.signup {
+  background: #ff511c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  align-items: center;
+}
+
+.content-left .info h1 {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.content-left .info p {
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  padding: 12px 25px;
+  background: #ff511c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.content-right img {
+  width: 100%;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #3b3434;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.price {
+  color: #ff5722;
+  margin-top: 10px;
+}
+.contact-container {
+  max-width: 600px;
+  background: #3a3333;
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+label {
+  display: block;
+  margin-top: 20px; /* Jarak atas antara label dengan elemen sebelumnya */
+  margin-bottom: 8px; /* Jarak bawah antara label dan input/textarea */
+  font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 12px;
+  background: #2a2323;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.contact-container button {
+  background: #ff5722;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  body {
+    margin: 0 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .content-left .info h1 {
+    font-size: 40px;
+  }
+}
+/* card tentang kami */
+/* Membuat konten berada di tengah */
+.about-container {
+  width: 50%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column; /* <-- susun ke bawah */
+  gap: 20px;
+}
+
+
+/* Box teks */
+.about-box {
+  background: #534444;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Card baru */
+.about-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.about-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* Judul center */
+h1 {
+  text-align: left;
+  margin-top: 40px;
+  color: white;
+}
+
